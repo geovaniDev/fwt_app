@@ -1,14 +1,30 @@
+.container {
+  padding-bottom: 5px;
+}
+
 .card-img {
   height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: fixed no-repeat;
+  background: no-repeat;
   background-size: cover;
 }
 
 .card1 {
-  background-image: url("https://comixrevenge.files.wordpress.com/2021/02/star-wars-darth-vader-arrives-on-exegol-10-spoilers-1256439-1280x0-1.jpeg");
+  background-image: url("../assets/sleep.jpg");
+}
+.card2 {
+  background-image: url("../assets/patient.jpg");
+}
+.card3 {
+  background-image: url("../assets/pills.jpg");
+}
+.card4 {
+  background-image: url("../assets/woman.png");
+}
+.card5 {
+  background-image: url("../assets/notes.png");
 }
 
 .bg {
@@ -21,4 +37,9 @@
 
 .card {
   color: white;
+}
+
+.space {
+  height: 10px;
+  width: 100%;
 }

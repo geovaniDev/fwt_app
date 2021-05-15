@@ -47,7 +47,7 @@
 
   <platform name="ios">
     <preference name="StatusBarDefaultScrollToTop" value="false" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#aa00ff" />
 
     <preference name="orientation" value="all"/>
