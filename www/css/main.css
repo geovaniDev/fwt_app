@@ -1,0 +1,24 @@
+.card-img {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: fixed no-repeat;
+  background-size: cover;
+}
+
+.card1 {
+  background-image: url("https://comixrevenge.files.wordpress.com/2021/02/star-wars-darth-vader-arrives-on-exegol-10-spoilers-1256439-1280x0-1.jpeg");
+}
+
+.bg {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  z-index: -3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  color: white;
+}

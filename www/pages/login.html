@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
+  <script src="../components/loader.js"></script>
+  <link rel="stylesheet" href="../components/loader.css" />
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <link rel="stylesheet" href="../css/forms.css" />
+  <script src="../js/forms.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- login/register form -->
+    <div class="row form-wrapper">
+      <h3>Entrar</h3>
+      <form class="col s12" id="login_form">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="address" type="text" class="validate" required />
+            <label for="address">Email ou celular</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="user_name" type="text" class="validate" required />
+            <label for="first_name">Nome de usuário</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
+            <label for="password">Senha</label>
+          </div>
+        </div>
+
+        <div class="buttons-wrapper">
+          <button type="submit" class="waves-effect waves-light btn-large purple accent-4 fullWidth">Entrar</button>
+          <br>
+          <a href="./register.html" class="waves-effect waves-light cyan lighten-2 btn-large fullWidth">
+            Inscreva-se
+          </a>
+          <span class="space"></span>
+          <a class="btn-flat secondary-button">
+            Esqueceu a senha?
+          </a>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
