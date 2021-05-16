@@ -37,9 +37,29 @@
   margin-bottom: 50px;
 }
 .slides li:last-child div img {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .btn-margin {
   margin-top: 25px;
+}
+
+/* extra small devices check */
+@media only screen and (max-width: 600px) {
+  .slides li div img {
+    max-width: 75%;
+  }
+}
+
+/* iphone check */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .slides li div img {
+    margin-bottom: 50px;
+  }
+  .slides li:first-child div img {
+    margin-bottom: 100px;
+  }
+  .slides li:last-child div img {
+    margin-bottom: 80px;
+  }
 }

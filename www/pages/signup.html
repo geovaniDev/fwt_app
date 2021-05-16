@@ -23,7 +23,6 @@
 
   <link rel="stylesheet" href="../css/style.css" />
 
-  <script src="./js/index.js"></script>
   <link rel="stylesheet" href="../css/forms.css" />
   <script src="../js/forms.js"></script>
 </head>
@@ -32,18 +31,18 @@
   <div class="form-container">
     <!-- login/register form -->
     <div class="row form-wrapper">
-      <h3 class="title">Entrar</h3>
-      <form class="col s12" id="login_form">
+      <h3 class="title">Inscreva-se</h3>
+      <form class="col s12" id="register_form">
         <div class="row">
           <div class="input-field col s12">
-            <input id="address" type="text" class="validate" required />
-            <label for="address">Email ou celular</label>
+            <input id="email" type="text" class="validate" required placeholder="Enter email..." />
+            <label for="email">Email</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="user_name" type="text" class="validate" required />
-            <label for="first_name">Nome de usuário</label>
+            <input id="phone" type="text" class="validate" required />
+            <label for="phone">Telefone Celular</label>
           </div>
         </div>
         <div class="row">
@@ -52,18 +51,19 @@
             <label for="password">Senha</label>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="confirm_password" type="password" class="validate" required />
+            <label for="confirm_password">Confirmar senha</label>
+          </div>
+        </div>
 
         <div class="buttons-wrapper">
-          <button type="submit" class="waves-effect waves-light btn-large purple accent-4 fullWidth">Entrar</button>
-          <br>
-          <a href="./register.html" class="waves-effect waves-light cyan lighten-2 btn-large fullWidth">
-            Inscreva-se
-          </a>
+          <button type="submit" class="waves-effect waves-light btn-large purple accent-4 fullWidth">Cadastrar</button>
           <span class="space"></span>
-          <a href="./signup.html" class="btn-flat secondary-button">
-            Esqueceu a senha?
+          <a href="./login.html" class="btn-flat secondary-button">
+            Já tem conta?
           </a>
-
         </div>
       </form>
     </div>

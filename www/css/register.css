@@ -1,0 +1,21 @@
+h6 {
+  margin-bottom: 15px;
+}
+
+p label input {
+  height: 50px;
+}
+
+p label:first-child {
+  margin-right: 20px;
+}
+
+.form-wrapper img {
+  width: 100%;
+}
+
+.buttons-wrapper a {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+}

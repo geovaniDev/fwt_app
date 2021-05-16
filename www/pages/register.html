@@ -24,45 +24,86 @@
   <link rel="stylesheet" href="../css/style.css" />
 
   <link rel="stylesheet" href="../css/forms.css" />
-  <script src="../js/forms.js"></script>
+  <link rel="stylesheet" href="../css/register.css" />
+  <script src="../js/register.js"></script>
 </head>
 
 <body>
   <div class="form-container">
     <!-- login/register form -->
     <div class="row form-wrapper">
-      <h3>Inscreva-se</h3>
-      <form class="col s12" id="register_form">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" required placeholder="Enter email..." />
-            <label for="email">Email</label>
+      <h3 class="title">Dados Pessoais</h3>
+      <form class="col s12" id="login_form">
+        <div style="display: none;">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="address" type="text" class="validate" required />
+              <label for="address">Qual o seu gênero?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="user_name" type="text" class="validate" required />
+              <label for="first_name">Qual a sua idade?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
+              <label for="password">Qual é o seu peso?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
+              <label for="password">Qual é a sua altura?</label>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="phone" type="text" class="validate" required />
-            <label for="phone">Telefone Celular</label>
+
+        <div>
+          <div class="row">
+            <div class="input-field col s12">
+              <h6>Possui alergia a algum medicamento?</h6>
+              <p>
+                <label>
+                  <input class="with-gap" name="group3" type="radio" />
+                  <span>Sim</span>
+                </label>
+                <label>
+                  <input class="with-gap" name="group3" type="radio" />
+                  <span>Não</span>
+                </label>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="user_name" type="text" class="validate" required />
+              <label for="first_name">Qual?</label>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
-            <label for="password">Senha</label>
+
+        <div style="display: none;">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
+              <label for="password">Qual é o seu peso?</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="confirm_password" type="password" class="validate" required />
-            <label for="confirm_password">Confirmar senha</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
+              <label for="password">Qual é a sua altura?</label>
+            </div>
           </div>
         </div>
 
         <div class="buttons-wrapper">
-          <button type="submit" class="waves-effect waves-light btn-large purple accent-4 fullWidth">Cadastrar</button>
-          <span class="space"></span>
-          <a href="./login.html" class="btn-flat secondary-button">
-            Já tem conta?
+          <a class="waves-effect waves-light cyan lighten-2 btn-large fullWidth">
+            Próximo
           </a>
         </div>
       </form>
