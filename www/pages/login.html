@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy"
     content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
   <script src="../components/loader.js"></script>
@@ -22,12 +23,13 @@
 
   <link rel="stylesheet" href="../css/style.css" />
 
+  <script src="./js/index.js"></script>
   <link rel="stylesheet" href="../css/forms.css" />
   <script src="../js/forms.js"></script>
 </head>
 
 <body>
-  <div class="container">
+  <div class="form-container">
     <!-- login/register form -->
     <div class="row form-wrapper">
       <h3>Entrar</h3>
@@ -58,7 +60,7 @@
             Inscreva-se
           </a>
           <span class="space"></span>
-          <a class="btn-flat secondary-button">
+          <a href="./register.html" class="btn-flat secondary-button">
             Esqueceu a senha?
           </a>
 

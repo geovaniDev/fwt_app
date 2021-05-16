@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy"
     content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
   <script src="../components/loader.js"></script>
@@ -22,41 +23,122 @@
 
   <link rel="stylesheet" href="../css/style.css" />
 
+  <script src="./js/index.js"></script>
   <link rel="stylesheet" href="../css/main.css" />
   <script src="../js/main.js"></script>
 </head>
 
 <body>
+  <!-- navbar config -->
   <div class="navbar-fixed">
-    <nav>
+    <nav class="nav-extended">
       <div class="nav-wrapper purple accent-4">
         <a href="#" class="brand-logo">Dados</a>
+
+        <ul class="right">
+          <li>
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-content purple accent-4">
+        <ul class="tabs tabs-transparent">
+          <li class="tab">
+            <a class="active" href="#eating" class="">Alimentação</a>
+          </li>
+          <li class="tab">
+            <a href="#health">Saúde</a>
+          </li>
+        </ul>
       </div>
     </nav>
-
   </div>
 
+  <!-- sidenav config -->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="../assets/mockup/profile-bg.jpg">
+        </div>
+        <a href="#user">
+          <img class="circle" src="../assets/mockup/lana.jpg">
+        </a>
+        <a href="#name">
+          <span class="white-text name">Lana Rhoades</span>
+        </a>
+        <a href="#email">
+          <span class="white-text email">jdandturk@gmail.com</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="material-icons">cloud</i>First Link With Icon
+      </a>
+    </li>
+    <li>
+      <a href="#!">Second Link</a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a class="subheader">Subheader</a>
+    </li>
+    <li>
+      <a class="waves-effect" href="#!">Third Link With Waves</a>
+    </li>
+  </ul>
+
+  <!-- sections config -->
   <div class="container">
-    <br>
-    <div class="card waves-effect waves-block waves-light card-img card1">
-      <span class="bg"></span>
-      <h4>Horas de sono diária</h4>
+    <div id="eating">
+      <div class="card waves-effect waves-block waves-light card-img card1">
+        <span class="bg"></span>
+        <h4>Carboidratos</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card2">
+        <span class="bg"></span>
+        <h4>Proteínas</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card3">
+        <span class="bg"></span>
+        <h4>Vitaminas</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card4">
+        <span class="bg"></span>
+        <h4>Hidratação diária</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card5">
+        <span class="bg"></span>
+        <h4>Peso</h4>
+      </div>
     </div>
-    <div class="card waves-effect waves-block waves-light card-img card2">
-      <span class="bg"></span>
-      <h4>Refluxos diários</h4>
-    </div>
-    <div class="card waves-effect waves-block waves-light card-img card3">
-      <span class="bg"></span>
-      <h4>Medicamentos</h4>
-    </div>
-    <div class="card waves-effect waves-block waves-light card-img card4">
-      <span class="bg"></span>
-      <h4>Menstruação</h4>
-    </div>
-    <div class="card waves-effect waves-block waves-light card-img card5">
-      <span class="bg"></span>
-      <h4>Anotações</h4>
+
+    <div id="health">
+      <div class="card waves-effect waves-block waves-light card-img card6">
+        <span class="bg"></span>
+        <h4>Horas de sono diária</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card7">
+        <span class="bg"></span>
+        <h4>Refluxos diários</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card8">
+        <span class="bg"></span>
+        <h4>Medicamentos</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card9">
+        <span class="bg"></span>
+        <h4>Menstruação</h4>
+      </div>
+      <div class="card waves-effect waves-block waves-light card-img card10">
+        <span class="bg"></span>
+        <h4>Anotações</h4>
+      </div>
     </div>
   </div>
 </body>

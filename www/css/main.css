@@ -10,20 +10,38 @@
   background: no-repeat;
   background-size: cover;
 }
+.card-img:first-child {
+  margin-top: 80px;
+}
 
 .card1 {
-  background-image: url("../assets/sleep.jpg");
+  background-image: url("../assets/carbo.jpg");
 }
 .card2 {
-  background-image: url("../assets/patient.jpg");
+  background-image: url("../assets/proteinas.jpg");
 }
 .card3 {
-  background-image: url("../assets/pills.jpg");
+  background-image: url("../assets/vitaminas.jpg");
 }
 .card4 {
-  background-image: url("../assets/woman.png");
+  background-image: url("../assets/agua.jpg");
 }
 .card5 {
+  background-image: url("../assets/imc.jpg");
+}
+.card6 {
+  background-image: url("../assets/sleep.jpg");
+}
+.card7 {
+  background-image: url("../assets/patient.jpg");
+}
+.card8 {
+  background-image: url("../assets/pills.jpg");
+}
+.card9 {
+  background-image: url("../assets/woman.png");
+}
+.card10 {
   background-image: url("../assets/notes.png");
 }
 
@@ -42,4 +60,10 @@
 .space {
   height: 10px;
   width: 100%;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background: none;
+  outline: none;
 }
