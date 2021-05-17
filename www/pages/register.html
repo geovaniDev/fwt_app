@@ -47,6 +47,9 @@
               <label for="first_name">Qual a sua idade?</label>
             </div>
           </div>
+        </div>
+
+        <div>
           <div class="row">
             <div class="input-field col s12">
               <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
@@ -57,31 +60,6 @@
             <div class="input-field col s12">
               <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
               <label for="password">Qual é a sua altura?</label>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="row">
-            <div class="input-field col s12">
-              <h6>Possui alergia a algum medicamento?</h6>
-              <p>
-                <label>
-                  <input class="with-gap" name="group3" type="radio" />
-                  <span>Sim</span>
-                </label>
-                <label>
-                  <input class="with-gap" name="group3" type="radio" />
-                  <span>Não</span>
-                </label>
-              </p>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="user_name" type="text" class="validate" required />
-              <label for="first_name">Qual?</label>
             </div>
           </div>
         </div>
@@ -89,14 +67,24 @@
         <div style="display: none;">
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
-              <label for="password">Qual é o seu peso?</label>
+              <h6>Possui alergia a algum medicamento?</h6>
+              <br>
+              <p>
+                <input type="radio" id="disease" name="radio-group">
+                <label for="disease">&nbsp; Sim</label>
+              </p>
+              <br>
+              <p>
+                <input type="radio" id="no_disease" name="radio-group">
+                <label for="no_disease">&nbsp; Não</label>
+              </p>
             </div>
           </div>
-          <div class="row">
+          <br>
+          <div class="row" id="disease_container">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
-              <label for="password">Qual é a sua altura?</label>
+              <input id="disease_name" type="text" class="validate" required />
+              <label for="first_name">Qual?</label>
             </div>
           </div>
         </div>
