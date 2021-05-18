@@ -11,6 +11,10 @@ body {
   height: 100vh;
 }
 
+img {
+  background-repeat: no-repeat;
+}
+
 .fullWidth {
   width: 100%;
 }

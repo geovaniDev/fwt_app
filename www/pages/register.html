@@ -34,7 +34,8 @@
     <div class="row form-wrapper">
       <h3 class="title">Dados Pessoais</h3>
       <form class="col s12" id="login_form">
-        <div style="display: none;">
+
+        <div id="section1">
           <div class="row">
             <div class="input-field col s12">
               <input id="address" type="text" class="validate" required />
@@ -49,7 +50,7 @@
           </div>
         </div>
 
-        <div>
+        <div id="section2">
           <div class="row">
             <div class="input-field col s12">
               <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
@@ -64,7 +65,7 @@
           </div>
         </div>
 
-        <div style="display: none;">
+        <div id="section3">
           <div class="row">
             <div class="input-field col s12">
               <h6>Possui alergia a algum medicamento?</h6>
@@ -84,14 +85,84 @@
           <div class="row" id="disease_container">
             <div class="input-field col s12">
               <input id="disease_name" type="text" class="validate" required />
-              <label for="first_name">Qual?</label>
+              <label for="disease_name">Qual?</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="section4">
+          <div class="row">
+            <div class="input-field col s12">
+              <h6>Possui alguma doença pre-existente?</h6>
+              <br>
+              <p>
+                <input type="radio" id="pre_disease" name="radio-group">
+                <label for="pre_disease">&nbsp; Sim</label>
+              </p>
+              <br>
+              <p>
+                <input type="radio" id="no_pre_disease" name="radio-group">
+                <label for="no_pre_disease">&nbsp; Não</label>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div id="pre_disease_container">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="pre_disease_name" type="text" class="validate" required />
+                <label for="pre_disease_name">Qual?</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="pre_disease_date" type="text" class="validate" required />
+                <label for="pre_disease_date">Em que ano foi descoberta?</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="section5">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="main_disease_date" type="number" class="validate" required />
+              <label style="color: black" for="main_disease_date">Em que ano foi descoberta a anorexia?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <h6>Foi passada alguma dieta?</h6>
+              <p>
+                <input type="radio" id="has_diet" name="radio-group">
+                <label for="has_diet">&nbsp; Sim</label>
+              </p>
+              <br>
+              <p>
+                <input type="radio" id="has_no_diet" name="radio-group">
+                <label for="has_no_diet">&nbsp; Não</label>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div id="diet_container">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="diet_name" type="text" class="validate" required
+                  placeholder="Informe de acordo com a dieta prescrita..." />
+                <label for="diet_name">Hora de cada refeição</label>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="buttons-wrapper">
-          <a class="waves-effect waves-light cyan lighten-2 btn-large fullWidth">
+          <a class="waves-effect waves-light cyan lighten-2 btn-large fullWidth" id="action_button">
             Próximo
+          </a>
+          <span class="space"></span>
+          <a class="btn-flat secondary-button" id="back_button">
+            Voltar
           </a>
         </div>
       </form>
