@@ -36,8 +36,8 @@ $(document).ready(() => {
   });
   $("#has_no_diet").change(() => $("#diet_container").hide());
 
-  $("[type='text']").focusin(() => $("#action_button").hide());
-  $("[type='text']").focusout(() => $("#action_button").show());
+  $("[type='text']").focusin(() => $(".buttons-wrapper").hide());
+  $("[type='text']").focusout(() => $(".buttons-wrapper").show());
 
   let currentSection = 1;
   $("#action_button").click(() => {

@@ -68,6 +68,16 @@
   outline: none;
 }
 
+.btn-options {
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  align-items: center;
+
+  margin-right: 5px;
+}
+
 /* iphone check */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .nav-wrapper {

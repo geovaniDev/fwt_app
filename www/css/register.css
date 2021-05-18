@@ -14,13 +14,6 @@ p:first-child {
   width: 100%;
 }
 
-.buttons-wrapper {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 5px;
-  width: 90%;
-}
-
 /* radio button config */
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
