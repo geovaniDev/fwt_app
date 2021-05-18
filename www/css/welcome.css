@@ -33,6 +33,9 @@
   min-height: 100%;
   background-color: #ffffff;
 }
+.slides li div img {
+  margin-bottom: 15px;
+}
 .slides li:first-child div img {
   margin-bottom: 50px;
 }
