@@ -5,7 +5,7 @@ $(document).ready(() => {
   );
   const userData = localStorage.getItem("@App:auth_data");
 
-  window.location.replace("pages/events.html");
+  window.location.replace("pages/main.html");
   // if (isAlreadyOpened) {
   //   if (isUnfinishedRegistration)
   //     return window.location.replace("pages/signup.html");

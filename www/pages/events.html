@@ -34,15 +34,18 @@
   <div class="form-container">
     <div class="row form-wrapper">
       <h3 class="title">Adicionar Evento</h3>
+      <br>
       <form class="col s12">
-        <div id="type-section">
+        <div id="type_section">
           <div class="row">
             <div class="input-field col s12">
-              <select>
+              <select id="event_type" required>
                 <option value="" disabled selected>Selecione uma opção</option>
-                <option value="1">Alimentação</option>
-                <option value="2">Mal-estar</option>
-                <option value="3">Anotação</option>
+                <option value="eating">Alimentação</option>
+                <option value="malaise">Mal-estar</option>
+                <option value="medication">Medicação</option>
+                <option value="sleep">Sono</option>
+                <option value="note">Anotação</option>
               </select>
               <label>Selecione o tipo de evento</label>
             </div>
@@ -50,15 +53,37 @@
           <br>
           <div class="row">
             <div class="input-field col s12">
-              <input id="event_time" type="text" class="timepicker">
+              <input id="event_time" type="text" class="timepicker" required>
               <label for="event_time">Hora do evento</label>
             </div>
           </div>
           <br>
           <div class="row">
             <div class="input-field col s12">
-              <input id="event_date" type="text" class="datepicker">
+              <input id="event_date" type="text" class="datepicker" required>
               <label for="event_date">Data do evento</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="eating_section">
+          <div class="row">
+            <div class="input-field col s12">
+              <select id="item_consumed">
+                <option value="" disabled selected>Selecione um item</option>
+                <option value="carboidrats">Carboidratos</option>
+                <option value="proteins">Proteínas</option>
+                <option value="vitamins">Vitaminas</option>
+                <option value="water">Água</option>
+              </select>
+              <label>O que foi consumido?</label>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="item_qtd" type="number" class="validate">
+              <label for="item_qtd">Quantidade consumida em g/ml</label>
             </div>
           </div>
         </div>

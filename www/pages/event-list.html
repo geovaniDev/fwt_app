@@ -13,6 +13,9 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"
+    integrity="sha512-tOcHADT+YGCQqH7YO99uJdko6L8Qk5oudLN6sCeI4BQnpENq6riR6x9Im+SGzhXpgooKBRkPsget4EOoH5jNCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -26,6 +29,8 @@
   <script src="./js/index.js"></script>
   <link rel="stylesheet" href="../css/main.css" />
   <script src="../js/main.js"></script>
+  <link rel="stylesheet" href="../css/event-list.css">
+  <script src="../js/event-list.js"></script>
 </head>
 
 <body>
@@ -33,23 +38,13 @@
   <div class="navbar-fixed">
     <nav class="nav-extended purple accent-4">
       <div class="nav-wrapper purple accent-4">
-        <a href="#" class="brand-logo">Dados</a>
+        <a href="#" class="brand-logo">Eventos</a>
 
         <ul class="right">
           <li>
             <a href="#" data-target="slide-out" class="sidenav-trigger">
               <i class="material-icons">menu</i>
             </a>
-          </li>
-        </ul>
-      </div>
-      <div class="nav-content purple accent-4">
-        <ul class="tabs tabs-transparent">
-          <li class="tab">
-            <a class="active" href="#eating" class="">Alimentação</a>
-          </li>
-          <li class="tab">
-            <a href="#health">Saúde</a>
           </li>
         </ul>
       </div>
@@ -106,56 +101,59 @@
     </ul> -->
   </div>
 
-  <!-- sections config -->
-  <div class="container">
-    <div id="eating">
-      <a href="./event-list.html" class="card waves-effect waves-block waves-light card-img card1"
-        onclick="openEventHistory('carboidrats')">
-        <span class="bg"></span>
-        <h4>Carboidratos</h4>
-      </a>
-      <a href="#" class="card waves-effect waves-block waves-light card-img card2"
-        onclick="openEventHistory('proteins')">
-        <span class="bg"></span>
-        <h4>Proteínas</h4>
-      </a>
-      <a href="#" class="card waves-effect waves-block waves-light card-img card3"
-        onclick="openEventHistory('vitamins')">
-        <span class="bg"></span>
-        <h4>Vitaminas</h4>
-      </a>
-      <a href="#" class="card waves-effect waves-block waves-light card-img card4" onclick="openEventHistory('water')">
-        <span class="bg"></span>
-        <h4>Hidratação diária</h4>
-      </a>
-      <a href="#" class="card waves-effect waves-block waves-light card-img card5" onclick="openEventHistory('weight')">
-        <span class="bg"></span>
-        <h4>Peso</h4>
-      </a>
-    </div>
+  <br>
+  <br>
 
-    <div id="health">
-      <div class="card waves-effect waves-block waves-light card-img card6">
-        <span class="bg"></span>
-        <h4>Horas de sono diária</h4>
+  <div id="list_section">
+    <h4 class="center-align">Consumo diário</h4>
+    <h5 class="center-align">Carboidratos</h5>
+    <br>
+    <ul class="collection"></ul>
+  </div>
+
+  <div class="row" id="edit_section">
+    <h4 class="center-align">Detalhes do evento</h4>
+    <br>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input readonly value="Consumo de carboidratos" id="event_type" type="text" class="validate">
+          <label for="event_type">Tipo de consumo</label>
+        </div>
       </div>
-      <div class="card waves-effect waves-block waves-light card-img card7">
-        <span class="bg"></span>
-        <h4>Refluxos diários</h4>
+      <div class="row">
+        <div class="input-field col s12">
+          <input readonly id="event_time" type="text" value="12:00" class="timepicker">
+          <label for="event_time">Hora do evento</label>
+        </div>
       </div>
-      <div class="card waves-effect waves-block waves-light card-img card8">
-        <span class="bg"></span>
-        <h4>Medicamentos</h4>
+      <div class="row">
+        <div class="input-field col s12">
+          <input readonly id="event_date" type="text" value="Mai 18, 2021" class="datepicker">
+          <label for="event_date">Data do evento</label>
+        </div>
       </div>
-      <div class="card waves-effect waves-block waves-light card-img card9">
-        <span class="bg"></span>
-        <h4>Menstruação</h4>
+      <div class="buttons-wrapper center-align">
+        <a class="waves-effect waves-light btn-large cyan lighten-2" id="edit_button"><i
+            class="material-icons right">edit</i>Editar</a>
+        <span id="save_buttons_wrapper">
+          <a class="waves-effect waves-light btn-large purple accent-4" id="save_button"><i
+              class="material-icons right">save</i>Salvar</a>
+          <br>
+          <br>
+          <a class="waves-effect waves-darken-1 btn-flat" id="cancel_edit_button">Cancelar</a>
+        </span>
       </div>
-      <div class="card waves-effect waves-block waves-light card-img card10">
-        <span class="bg"></span>
-        <h4>Anotações</h4>
-      </div>
-    </div>
+    </form>
+  </div>
+
+  <div id="chart_section">
+    <h4 class="header center-align">Consumo por mês</h4>
+    <h5 class="header center-align">Carboidratos</h5>
+
+    <br>
+
+    <canvas id="myChart" height="50vh" width="80vw"></canvas>
   </div>
 </body>
 

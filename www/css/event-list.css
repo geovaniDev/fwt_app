@@ -1,3 +1,8 @@
+#cancel_edit_button {
+  color: red;
+  font-weight: 600;
+}
+
 .timepicker-digital-display,
 .datepicker-date-display,
 .datepicker-table td.is-selected {
@@ -10,9 +15,4 @@
 .datepicker-today,
 .datepicker-done {
   color: #aa00ff;
-}
-
-.dropdown-content li > a,
-.dropdown-content li > span {
-  color: black;
 }
