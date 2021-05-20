@@ -40,6 +40,14 @@
       <div class="nav-wrapper purple accent-4">
         <a href="#" class="brand-logo">Eventos</a>
 
+        <ul class="left">
+          <li>
+            <a href="./main.html">
+              <i class="material-icons">keyboard_backspace</i>
+            </a>
+          </li>
+        </ul>
+
         <ul class="right">
           <li>
             <a href="#" data-target="slide-out" class="sidenav-trigger">
@@ -133,9 +141,12 @@
           <label for="event_date">Data do evento</label>
         </div>
       </div>
-      <div class="buttons-wrapper center-align">
+      <div class="buttons-wrapper center-align flex column align-items-center">
         <a class="waves-effect waves-light btn-large cyan lighten-2" id="edit_button"><i
-            class="material-icons right">edit</i>Editar</a>
+            class="material-icons right">edit</i>
+          Editar
+        </a>
+        <a class="waves-effect waves-darken-1 btn-flat" id="back_button">Voltar</a>
         <span id="save_buttons_wrapper">
           <a class="waves-effect waves-light btn-large purple accent-4" id="save_button"><i
               class="material-icons right">save</i>Salvar</a>
@@ -154,6 +165,13 @@
     <br>
 
     <canvas id="myChart" height="50vh" width="80vw"></canvas>
+  </div>
+
+  <br>
+
+  <div class="center-align">
+    <a class="waves-effect waves-darken-1 btn-large cyan lighten-2" id="open_chart_button">Consumo
+      mensal</a>
   </div>
 </body>
 

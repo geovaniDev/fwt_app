@@ -1,6 +1,11 @@
-#cancel_edit_button {
+#cancel_edit_button,
+#back_button {
   color: red;
   font-weight: 600;
+}
+
+#back_button {
+  margin-top: 20px;
 }
 
 .timepicker-digital-display,

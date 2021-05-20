@@ -28,7 +28,9 @@ function goToEditSection(eventIndex) {
   $("#event_time").val(API_DATA[eventIndex].eventTime);
   $("#event_date").val(API_DATA[eventIndex].eventDate);
   $("#list_section").hide();
+  $("#open_chart_button").hide();
   $("#edit_section").show();
+  $("#back_button").show();
 }
 
 $(document).ready(() => {
@@ -137,7 +139,9 @@ $(document).ready(() => {
   $("#save_buttons_wrapper").hide();
 
   $("#edit_button").click(() => {
+    $("#open_chart_button").hide();
     $("#edit_button").hide();
+    $("#back_button").hide();
     $("#save_buttons_wrapper").show();
     enableInputs();
     $("#event_time").focus();
@@ -146,6 +150,7 @@ $(document).ready(() => {
   $("#cancel_edit_button").click(() => {
     $("#edit_button").show();
     $("#save_buttons_wrapper").hide();
+    $("#back_button").show();
   });
 
   for (let index = 6; index > 0; index -= 1) {
@@ -172,27 +177,47 @@ $(document).ready(() => {
 
   $(".collection").html(populateTable(API_DATA));
 
-  // const ctx = document.getElementById("myChart").getContext("2d");
-  // const myChart = new Chart(ctx, {
-  //   type: "line",
-  //   data: {
-  //     labels: lastMonth,
-  //     datasets: [
-  //       {
-  //         label: "quantidate consumida",
-  //         data: [12, 19, 3, 5, 2, 3, 9],
-  //         backgroundColor: ["rgb(153, 102, 255)"],
-  //         borderColor: ["rgba(255, 99, 132, 1)"],
-  //         borderWidth: 1,
-  //       },
-  //     ],
-  //   },
-  //   options: {
-  //     scales: {
-  //       y: {
-  //         beginAtZero: true,
-  //       },
-  //     },
-  //   },
-  // });
+  $("#open_chart_button").click(() => {
+    if ($("#chart_section").is(":hidden")) {
+      $("#list_section").hide();
+      $("#edit_section").hide();
+      $("#chart_section").show();
+      $("#open_chart_button").text("Consumo diário");
+    } else {
+      $("#list_section").show();
+      $("#chart_section").hide();
+      $("#open_chart_button").text("Consumo mensal");
+    }
+  });
+
+  $("#back_button").click(() => {
+    $("#list_section").show();
+    $("#edit_section").hide();
+    $("#open_chart_button").show();
+    $("#back_button").hide();
+  });
+
+  const ctx = document.getElementById("myChart").getContext("2d");
+  const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: lastMonth,
+      datasets: [
+        {
+          label: "quantidate consumida",
+          data: [12, 19, 3, 5, 2, 3, 9],
+          backgroundColor: ["rgb(153, 102, 255)"],
+          borderColor: ["rgba(255, 99, 132, 1)"],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
 });
