@@ -6,13 +6,23 @@ const API_DATA = [
 
 function goToEditSection(eventIndex) {
   const eventHistoryType = sessionStorage.getItem("@App:event_history_type");
-  switch (eventHistoryType) {
-    case "carboidrats":
-      $("#event_type").val("Consumo de carboidratos");
-      break;
 
-    default:
-      break;
+  if (
+    eventHistoryType !== "peso" &&
+    eventHistoryType !== "menstruação" &&
+    eventHistoryType !== "anotações" &&
+    eventHistoryType !== "refluxos" &&
+    eventHistoryType !== "horas de sono"
+  ) {
+    $("#event_type").val(`Consumo de ${eventHistoryType}`);
+  }
+
+  if (eventHistoryType === "peso") {
+    $("#event_type").val(`Alteração de ${eventHistoryType}`);
+  } else {
+    $("#event_type").val(
+      eventHistoryType.replace(/^\w/, (char) => char.toUpperCase())
+    );
   }
 
   $("#event_time").val(API_DATA[eventIndex].eventTime);
@@ -22,6 +32,7 @@ function goToEditSection(eventIndex) {
 }
 
 $(document).ready(() => {
+  const eventHistoryType = sessionStorage.getItem("@App:event_history_type");
   const currentDate = new Date(Date.now());
 
   const monthNames = [
@@ -140,6 +151,23 @@ $(document).ready(() => {
   for (let index = 6; index > 0; index -= 1) {
     const date = new Date(today.getFullYear(), today.getMonth() - index, 1);
     lastMonth.push(monthNames[date.getMonth()]);
+  }
+
+  if (
+    eventHistoryType !== "peso" &&
+    eventHistoryType !== "menstruação" &&
+    eventHistoryType !== "anotações" &&
+    eventHistoryType !== "refluxos" &&
+    eventHistoryType !== "horas de sono"
+  ) {
+    $("#subtitle_header").text(
+      eventHistoryType.replace(/^\w/, (char) => char.toUpperCase())
+    );
+  } else {
+    $("#title_header").text(
+      eventHistoryType.replace(/^\w/, (char) => char.toUpperCase())
+    );
+    $("#subtitle_header").hide();
   }
 
   $(".collection").html(populateTable(API_DATA));
