@@ -42,10 +42,10 @@
               <select id="event_type" required>
                 <option value="" disabled selected>Selecione uma opção</option>
                 <option value="eating">Alimentação</option>
-                <option value="malaise">Mal-estar</option>
+                <!-- <option value="malaise">Mal-estar</option> -->
                 <option value="medication">Medicação</option>
-                <option value="sleep">Sono</option>
-                <option value="note">Anotação</option>
+                <!-- <option value="sleep">Sono</option>
+                <option value="note">Anotação</option> -->
               </select>
               <label>Selecione o tipo de evento</label>
             </div>
@@ -67,23 +67,29 @@
         </div>
 
         <div id="eating_section">
-          <div class="row">
+          <div class="row" id="item_row">
             <div class="input-field col s12">
               <select id="item_consumed">
                 <option value="" disabled selected>Selecione um item</option>
-                <option value="carboidrats">Carboidratos</option>
-                <option value="proteins">Proteínas</option>
-                <option value="vitamins">Vitaminas</option>
-                <option value="water">Água</option>
+                <option value="carboidratos">Carboidratos</option>
+                <option value="proteínas">Proteínas</option>
+                <option value="vitaminas">Vitaminas</option>
+                <option value="água">Água</option>
               </select>
               <label>O que foi consumido?</label>
             </div>
           </div>
           <br>
-          <div class="row">
+          <div class="row" id="eating_row">
             <div class="input-field col s12">
               <input id="item_qtd" type="number" class="validate">
               <label for="item_qtd">Quantidade consumida em g/ml</label>
+            </div>
+          </div>
+          <div class="row" id="medication_row">
+            <div class="input-field col s12">
+              <input id="medication_name" type="text" class="validate">
+              <label for="medication_name">Nome do remédio.</label>
             </div>
           </div>
         </div>

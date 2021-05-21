@@ -35,6 +35,12 @@
       <div class="nav-wrapper purple accent-4">
         <a href="#" class="brand-logo">Dados</a>
 
+        <ul class="left">
+          <a href="#" class="waves-effect waves-light no-hover">
+            <i class="material-icons">notifications</i>
+          </a>
+        </ul>
+
         <ul class="right">
           <li>
             <a href="#" data-target="slide-out" class="sidenav-trigger">
@@ -64,10 +70,10 @@
           <img src="../assets/mockup/profile-bg.jpg">
         </div>
         <a href="#user">
-          <img class="circle" src="../assets/mockup/lana.jpg">
+          <img class="circle" src="../assets/mockup/profile.jpg">
         </a>
         <a href="#name">
-          <span class="white-text name">Lana Rhoades</span>
+          <span class="white-text name">User</span>
         </a>
         <a href="#email">
           <span class="white-text email">jdandturk@gmail.com</span>
@@ -75,23 +81,55 @@
       </div>
     </li>
     <li>
-      <a href="#!">
-        <i class="material-icons">cloud</i>First Link With Icon
-      </a>
-    </li>
-    <li>
-      <a href="#!">Second Link</a>
+      <a href="#!">Perfil</a>
     </li>
     <li>
       <div class="divider"></div>
     </li>
     <li>
-      <a class="subheader">Subheader</a>
+      <a class="subheader">Opções</a>
     </li>
     <li>
-      <a class="waves-effect" href="#!">Third Link With Waves</a>
+      <a class="waves-effect" href="#!">Preferências</a>
+    </li>
+    <li>
+      <a class="waves-effect" href="#!" onclick="openCloseSessionModal()">
+        <i class="material-icons">exit_to_app</i>Sair
+      </a>
     </li>
   </ul>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Encerrar sessão</h4>
+      <p>Deseja sair?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="./login.html"
+        onclick="localStorage.removeItem('@App:current_user'); localStorage.removeItem('@App:event_items');"
+        class="modal-close waves-effect waves-green btn-flat">Sim</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Não</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Parabéns!</h4>
+      <p>Você está cumprindo a meta!</p>
+      <br>
+      <div class="flex justify-center">
+        <i class="material-icons center-align star-icon">star</i>
+        <i class="material-icons center-align star-icon">star</i>
+        <i class="material-icons center-align star-icon">star</i>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+        onclick="localStorage.removeItem('@App:star')">Ok</a>
+    </div>
+  </div>
 
   <!-- floating button config -->
   <div class="fixed-action-btn">
@@ -153,7 +191,7 @@
         <h4>Medicamentos</h4>
       </a>
       <a href="./event-list.html" class="card waves-effect waves-block waves-light card-img card9"
-        onclick="openEventHistory('menstruação')">
+        onclick="openEventHistory('menstruação')" id="female_option">
         <span class="bg"></span>
         <h4>Menstruação</h4>
       </a>

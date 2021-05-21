@@ -98,7 +98,22 @@ $(document).ready(() => {
             .removeClass(["cyan", "lighten-2"])
             .addClass(["purple", "accent-4"]);
           $("#action_button").text("Adicionar");
-          return $("#eating_section").show();
+          $("#eating_section").show();
+          $("#medication_row").hide();
+          $("#item_row").show();
+          return $("#eating_row").show();
+
+        case "medication":
+          currentSection = "eating_section";
+
+          $("#action_button")
+            .removeClass(["cyan", "lighten-2"])
+            .addClass(["purple", "accent-4"]);
+          $("#action_button").text("Adicionar");
+          $("#eating_section").show();
+          $("#eating_row").hide();
+          $("#item_row").hide();
+          return $("#medication_row").show();
 
         default:
           break;
@@ -106,11 +121,16 @@ $(document).ready(() => {
     }
 
     if (currentSection === "eating_section") {
+      const eventItems = JSON.parse(localStorage.getItem("@App:event_items"));
       const itemConsumed = $("#item_consumed").val();
       const qtd = $("#item_qtd").val();
-      const unity = itemConsumed !== "water" ? "g" : "ml";
+      const medicationName = $("#medication_name").val();
 
-      if (!itemConsumed || !qtd)
+      if (
+        (eventData.eventType === "eating" && !itemConsumed) ||
+        (eventData.eventType === "eating" && !qtd) ||
+        (eventData.eventType === "medication" && !medicationName)
+      )
         return M.toast({
           html: "Preencha todos os campos!",
           classes: "red darken-1",
@@ -120,13 +140,19 @@ $(document).ready(() => {
         ...eventData,
         itemConsumed,
         qtd,
-        unity,
+        medicationName,
       };
 
       M.toast({
         html: "Salvando informações...",
         displayLength: "infinite",
       });
+
+      localStorage.setItem(
+        "@App:event_items",
+        JSON.stringify([...eventItems, eventData])
+      );
+      localStorage.setItem("@App:star", true);
 
       setTimeout(() => M.Toast.dismissAll(), 5000);
       setTimeout(
@@ -137,12 +163,14 @@ $(document).ready(() => {
           }),
         5500
       );
-      setTimeout(() => window.location.replace("../main.html"), 6500);
+      setTimeout(() => {
+        window.location.replace("./main.html");
+      }, 6500);
     }
   });
   $("#back_button").click(() => {
     if (currentSection === "type_section") {
-      return window.location.replace("../main.html");
+      return window.location.replace("./main.html");
     }
 
     currentSection = "type_section";

@@ -38,14 +38,18 @@
         <div id="section1">
           <div class="row">
             <div class="input-field col s12">
-              <input id="address" type="text" class="validate" required />
-              <label for="address">Qual o seu gênero?</label>
+              <select id="genre" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="male">Homem</option>
+                <option value="female">Mulher</option>
+              </select>
+              <label for="genre">Qual o seu gênero?</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="user_name" type="text" class="validate" required />
-              <label for="first_name">Qual a sua idade?</label>
+              <input id="age" type="number" class="validate" required />
+              <label for="age">Qual a sua idade?</label>
             </div>
           </div>
         </div>
@@ -53,14 +57,14 @@
         <div id="section2">
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
-              <label for="password">Qual é o seu peso?</label>
+              <input id="weight" type="number" class="validate" required placeholder="No mínimo 8 caracteres" />
+              <label for="weight">Qual é o seu peso(kg)?</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate" required placeholder="No mínimo 8 caracteres" />
-              <label for="password">Qual é a sua altura?</label>
+              <input id="height" type="number" class="validate" required placeholder="No mínimo 8 caracteres" />
+              <label for="height">Qual é a sua altura(cm)?</label>
             </div>
           </div>
         </div>
@@ -93,7 +97,7 @@
         <div id="section4">
           <div class="row">
             <div class="input-field col s12">
-              <h6>Possui alguma doença pre-existente?</h6>
+              <h6>Possui alguma doença pré-existente?</h6>
               <br>
               <p>
                 <input type="radio" id="pre_disease" name="radio-group">
@@ -116,7 +120,7 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="pre_disease_date" type="text" class="validate" required />
+                <input id="pre_disease_date" type="number" class="validate" required />
                 <label for="pre_disease_date">Em que ano foi descoberta?</label>
               </div>
             </div>
@@ -148,9 +152,9 @@
           <div id="diet_container">
             <div class="row">
               <div class="input-field col s12">
-                <input id="diet_name" type="text" class="validate" required
+                <input id="eating_time" type="text" class="validate" required
                   placeholder="Informe de acordo com a dieta prescrita..." />
-                <label for="diet_name">Hora de cada refeição</label>
+                <label for="eating_time">Hora de cada refeição</label>
               </div>
             </div>
           </div>

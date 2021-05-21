@@ -3,17 +3,21 @@ $(document).ready(() => {
   const isUnfinishedRegistration = localStorage.getItem(
     "@App:registration_unfinished"
   );
-  const userData = localStorage.getItem("@App:auth_data");
+  const currentUser = localStorage.getItem("@App:current_user");
 
-  window.location.replace("pages/main.html");
-  // if (isAlreadyOpened) {
-  //   if (isUnfinishedRegistration)
-  //     return window.location.replace("pages/signup.html");
+  // window.location.replace("pages/main.html");
+  if (isAlreadyOpened) {
+    if (isUnfinishedRegistration)
+      return window.location.replace("pages/signup.html");
 
-  //   window.location.replace(
-  //     userData && userData.authToken ? "pages/main.html" : "pages/login.html"
-  //   );
-  // } else {
-  //   window.location.replace("pages/welcome.html");
-  // }
+    window.location.replace(
+      currentUser ? "pages/main.html" : "pages/login.html"
+    );
+  } else {
+    localStorage.setItem(
+      "@App:users",
+      JSON.stringify([{ email: "test", password: "js71h982JKH548jivQ" }])
+    );
+    window.location.replace("pages/welcome.html");
+  }
 });
